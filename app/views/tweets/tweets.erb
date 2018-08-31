@@ -5,9 +5,11 @@
   </head>
   <body>
 
-    <div class="container">
-      <h2>Test</h2>
-    </div>
+    <% @tweets.each do |tweet| %>
+      <p><%= tweet.content %></p>
+    <% end %>
+
+    <p>Create Tweet Here</p>
 
   </body>
 </html>
