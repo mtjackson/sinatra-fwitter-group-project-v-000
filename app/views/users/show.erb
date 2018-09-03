@@ -4,10 +4,12 @@
     <title>Fwitter</title>
   </head>
   <body>
-    <h2>Welcome, <%= current_user.username %> </h2>
+    <h2>Welcome, <%= @user.username %> </h2>
 
-    <% @tweets.each do |tweet| %>
+    <% Tweet.each do |tweet| %>
+      <% if tweet.user_id == @user.id %>
       <p><%= tweet.content %></p>
+      <% end %>
     <% end %>
 
     <p>Create Tweet Here</p>
