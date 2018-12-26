@@ -1,7 +1,6 @@
 class CreateUsers < ActiveRecord::Migration
-  def up
-    if table_exists?(:users)
-    create_table :users do |t|
+  def change
+    change_table :users do |t|
       t.string :username
       t.text :email
       t.string :password_digest
